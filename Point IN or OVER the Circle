@@ -1,0 +1,32 @@
+/*
+
+Программа запрашивает радиус круга (radius) и произвольные координаты точки (x, y),
+затем проверяет, вписана ли точка в эту окружность.
+
+*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float radius = 0;
+float x = 0;
+float y = 0;
+float pointLength = 0;
+
+int main()
+{
+	cout << "Enter you`r radius: " << endl;
+	cin >> radius;
+	cout << "Enter you`r point coordinates (X and Y): " << endl;
+	cin >> x >> y;
+	pointLength = sqrt(pow(x, 2) + pow(y, 2));
+	
+	if (pointLength <= radius){
+		cout << "Point IN the circle" << endl;
+	} else if (pointLength > radius) {
+		cout << "Point OVER the circle" << endl;
+	}
+	system("PAUSE");
+	return 0;
+}
